@@ -2,6 +2,12 @@
 
 Cancel a subscription after all failed payment retry attempts have failed.
 
+WooCommerce Subscriptions makes it possible to apply a set of custom [Retry Rules](https://docs.woocommerce.com/document/subscriptions/develop/failed-payment-retry/#section-3) to modify the behaviour of the Failed Payment Retry system. However, those rules only facilitate customizing the status applied at the time the retry rule is applied, not the status to be applied after the payment retry attempt is processed.
+
+The default status applied to the order if a retry attempt fails is _failed_, and the status applied to the subscription is _on-hold_.
+
+This plugin will transition both the order and related subscriptions for that order to _cancelled_ if all automatical payment retry attemps fail.
+
 ## Installation
 
 To install:
