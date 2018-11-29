@@ -52,7 +52,7 @@ if ( false === PP_Dependencies::is_subscriptions_active( '2.1' ) ) {
  * @param WCS_Retry $retry Details of the retry just processed
  * @param WC_Order The order on which the failed payment retry attempt was processed
  */
-public static function wcscar_after_payment_retry( $retry, $order ) {
+function wcscar_after_payment_retry( $retry, $order ) {
 
 	// If payment completed, nothing to do
 	if ( ! $order->needs_payment() ) {
