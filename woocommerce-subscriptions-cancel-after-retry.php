@@ -76,4 +76,4 @@ function wcscar_after_payment_retry( $retry, $order ) {
 		do_action( 'woocommerce_subscriptions_cancelled_after_retry', $order, $subscription, $retry );
 	}
 }
-add_filter( 'woocommerce_subscriptions_after_payment_retry', 'wcscar_after_payment_retry' );
+add_filter( 'woocommerce_subscriptions_after_payment_retry', 'wcscar_after_payment_retry', 10, 2 );
